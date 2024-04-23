@@ -4,7 +4,7 @@ setup:
       as: DATABASE
 build:
   docker:
-    web: Dockerfile
+    web: web/Dockerfile
     worker: worker/Dockerfile
 release:
   image: worker
