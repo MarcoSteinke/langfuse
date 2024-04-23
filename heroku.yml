@@ -7,6 +7,9 @@ build:
     web: web/Dockerfile
     worker: worker/Dockerfile
 release:
+  command:
+    - ./web/entrypoint.sh
   image: worker
 run:
   web: node worker/dist/src/index.js
+  worker: node worker/dist/src/index.js
